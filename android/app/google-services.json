@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "396720801245",
+    "project_id": "upload-image-and-video",
+    "storage_bucket": "upload-image-and-video.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:396720801245:android:f7e788f18f2aa217c02234",
+        "android_client_info": {
+          "package_name": "com.example.tem_tech_task_assignment"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCoiPmmxxT2ZwZ33iS6UArjdqj20oF2eXA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
