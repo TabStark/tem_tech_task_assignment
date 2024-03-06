@@ -50,6 +50,10 @@ class _FibonacciScreenState extends State<FibonacciScreen> {
             SizedBox(
               width: 300,
               child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.blue,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10))),
                 onPressed: () {
                   int? position = int.tryParse(_positionController.text);
                   if (position != null && position >= 0) {
@@ -62,7 +66,10 @@ class _FibonacciScreenState extends State<FibonacciScreen> {
                     });
                   }
                 },
-                child: Text('Calculate'),
+                child: Text(
+                  'Calculate',
+                  style: TextStyle(color: Colors.white),
+                ),
               ),
             ),
             SizedBox(height: 16.0),

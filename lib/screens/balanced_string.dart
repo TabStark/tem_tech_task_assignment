@@ -15,33 +15,47 @@ class _BalancedStringState extends State<BalancedString> {
       appBar: AppBar(
         title: Text('Balanced Substring Finder'),
       ),
-      body: Center(
-        child: Padding(
-          padding: const EdgeInsets.all(20.0),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              TextField(
+      body: Container(
+        width: double.infinity,
+        height: double.infinity,
+        padding: const EdgeInsets.all(20.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: <Widget>[
+            SizedBox(
+              width: 300,
+              child: TextField(
                 controller: _inputController,
                 decoration: InputDecoration(labelText: 'Enter a string'),
               ),
-              SizedBox(height: 20.0),
-              ElevatedButton(
+            ),
+            SizedBox(height: 20.0),
+            SizedBox(
+              width: 300,
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.blue,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10))),
                 onPressed: () {
                   setState(() {
                     _result =
                         findLongestBalancedSubstring(_inputController.text);
                   });
                 },
-                child: Text('Find Longest Balanced Substring'),
+                child: Text(
+                  'Find Balanced Substring',
+                  style: TextStyle(color: Colors.white),
+                ),
               ),
-              SizedBox(height: 20.0),
-              Text(
-                'Longest Balanced Substring: $_result',
-                style: TextStyle(fontSize: 18.0),
-              ),
-            ],
-          ),
+            ),
+            SizedBox(height: 20.0),
+            Text(
+              'Result: $_result',
+              style: TextStyle(fontSize: 18.0),
+            ),
+          ],
         ),
       ),
     );
