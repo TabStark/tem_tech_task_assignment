@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tem_tech_task_assignment/screens/balanced_string.dart';
 
 class FibonacciScreen extends StatefulWidget {
   @override
@@ -14,6 +15,18 @@ class _FibonacciScreenState extends State<FibonacciScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text('2. Fibonacci Calculator'),
+        actions: [
+          SizedBox(
+            width: 50,
+            child: InkWell(
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => BalancedString()));
+              },
+              child: Text("Next"),
+            ),
+          )
+        ],
       ),
       body: Container(
         width: double.infinity,

@@ -131,7 +131,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                       }
                     },
                     child: const Text(
-                      "Choose Image",
+                      "Choose file",
                       style: TextStyle(color: Colors.black),
                     )),
                 const SizedBox(
